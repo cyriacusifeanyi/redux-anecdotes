@@ -1,5 +1,5 @@
 import anecdoteService from '../services/anecdotes'
-
+import { notificationChange } from './notificationReducer'
 const anecdoteReducer = (state = [], action) => {
   // console.log('state now: ', state)
   // console.log('action', action)
@@ -38,11 +38,15 @@ export const initializeAnecdotes = () => {
 
 export const voteFor = (id) => {
   return async dispatch => {
-    const updatedAnecdotes = await anecdoteService.voteFor(id)
+    const updatedAnecdote = await (await anecdoteService.voteFor(id)).data
+    console.log(updatedAnecdote)
+    const anecdotes = await anecdoteService.getAll()
     dispatch({
       type: 'VOTE_ANECDOTE',
-      data: updatedAnecdotes
+      data: anecdotes
     })
+
+    dispatch(notificationChange(`new anecdote '${updatedAnecdote.content}'`, 5))
   }
 }
 

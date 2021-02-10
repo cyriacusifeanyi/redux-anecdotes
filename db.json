@@ -42,18 +42,33 @@
     },
     {
       "content": "hello boss",
-      "votes": 1,
+      "votes": 2,
       "id": "HicpCgR"
     },
     {
       "content": "👋 ",
-      "votes": 0,
+      "votes": 3,
       "id": "2GMX3pC"
     },
     {
       "content": "terevetoula Roosa",
-      "votes": 3,
+      "votes": 5,
       "id": "sSf8vg7"
+    },
+    {
+      "content": "if you want lov you just have to give some away",
+      "votes": 0,
+      "id": "UyL42_a"
+    },
+    {
+      "content": "how are you",
+      "votes": 0,
+      "id": "5Q0qMop"
+    },
+    {
+      "content": "oh no",
+      "votes": 0,
+      "id": "HHW57PW"
     }
   ]
 }

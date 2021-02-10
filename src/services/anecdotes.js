@@ -24,8 +24,8 @@ const voteFor = async (id) => {
     ...anecdoteToVote,
     votes: anecdoteToVote.votes + 1
   }
-  await axios.patch(baseUrl.concat('/', id), changedAnecdote)
-  return await getAll()
+  
+  return await axios.patch(baseUrl.concat('/', id), changedAnecdote)
 }
 
 export default {
