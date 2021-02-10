@@ -16,7 +16,20 @@ const createNew = async (content) => {
   return response.data
 }
 
+const voteFor = async (id) => {
+
+  const anecdoteToVote = await (await axios.get(baseUrl.concat('/', id))).data
+
+  const changedAnecdote = {
+    ...anecdoteToVote,
+    votes: anecdoteToVote.votes + 1
+  }
+  await axios.patch(baseUrl.concat('/', id), changedAnecdote)
+  return await getAll()
+}
+
 export default {
   getAll,
-  createNew
+  createNew,
+  voteFor
 }

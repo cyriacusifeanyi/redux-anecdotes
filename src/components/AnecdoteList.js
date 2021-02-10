@@ -33,6 +33,7 @@ const AnecdoteList = () => {
 
   const upvoteAction = (id) => {
     dispatch(voteFor(id))
+    
     dispatch(notificationChange('VOTE_ANECDOTE_NOTIFICATION'))
     setTimeout(() => {
       dispatch(removeNotification())
