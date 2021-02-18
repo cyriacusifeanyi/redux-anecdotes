@@ -20,14 +20,14 @@ const AnecdoteList = (props) => {
 
   const anecdotesToShow = () => {
     if (props.filter === null || props.filter === '') {
-      console.log('1', props.anecdotes)
+      // console.log('1', props.anecdotes)
       return props.anecdotes
     } else {
       const result = props.anecdotes
         .filter(anecdote => anecdote.content.toLowerCase()
           .includes(props.filter.toLowerCase())
         )
-      console.log('2', result)
+      // console.log('2', result)
       return result
     }
   }
@@ -62,7 +62,7 @@ const mapDispatchToProps = {
 
 const ConnectedAnecdoteList = connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(AnecdoteList)
 
 export default ConnectedAnecdoteList
