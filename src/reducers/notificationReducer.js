@@ -21,13 +21,17 @@ const notificationReducer = (state = null, action) => {
   }
 }
 
+var prevTimerId = undefined
+
 export const notificationChange = (message, timeout_in_sec) => {
+
+  clearTimeout(prevTimerId)
   return async dispatch => {
     dispatch({
       type: 'SET_NOTIFICATION',
       data: message
     })
-    setTimeout(() => {
+    prevTimerId = setTimeout(() => {
       dispatch(removeNotification())
     }, (timeout_in_sec * 1000))
   }
