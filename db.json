@@ -42,7 +42,7 @@
     },
     {
       "content": "hello boss",
-      "votes": 2,
+      "votes": 7,
       "id": "HicpCgR"
     },
     {
@@ -52,7 +52,7 @@
     },
     {
       "content": "terevetoula Roosa",
-      "votes": 5,
+      "votes": 8,
       "id": "sSf8vg7"
     },
     {
@@ -69,6 +69,11 @@
       "content": "oh no",
       "votes": 0,
       "id": "HHW57PW"
+    },
+    {
+      "content": "",
+      "votes": 0,
+      "id": "OxNPi-z"
     }
   ]
 }
